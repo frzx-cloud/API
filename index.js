@@ -35,3 +35,25 @@ app.get("/clientes", (req, res)=>{
 app.listen(port, ()=>{
     console.log("API rodando na porta " + port)
 })
+
+/* 
+Instale as bibliotecas e o cliente de API:
+npm init
+npm i express
+Procure pela extensão RapidAPI Client no VSCode.
+*/
+// Para executar a API no terminal: node index.js
+// Link para testar a API: http://localhost:3000/rota
+const express = require("express")
+const app = express()
+const port = 3000
+app.use(express.json()) // configura API para usar JSON.
+const fs = require('fs') // importa leitura e escrita de arquivos.
+
+
+
+
+// Execução da API:
+app.listen(port, ()=>{
+    console.log("API rodando na porta " + port)
+})
